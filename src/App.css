@@ -1,0 +1,352 @@
+/* =========================
+GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  width:100%;
+  min-height:100vh;
+}
+
+/* =========================
+MAIN CONTAINER
+========================= */
+
+.todo-container{
+  width:100%;
+  max-width:500px;
+  background:white;
+  padding:30px;
+  margin:0 auto;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* =========================
+HEADER
+========================= */
+
+.todo-header{
+  margin-bottom:30px;
+}
+
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.todo-header h1{
+  font-size:34px;
+  font-weight:700;
+}
+
+.todo-header p{
+  color:#6b7280;
+  margin-top:6px;
+}
+
+.settings-btn{
+  border:none;
+  background:#f3f4f6;
+  padding:10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* =========================
+SETTINGS PANEL
+========================= */
+
+.settings-panel{
+  margin-top:20px;
+  background:#f9fafb;
+  padding:20px;
+  border-radius:10px;
+  width:350px;
+}
+
+.setting-item{
+  margin-bottom:15px;
+}
+
+.setting-item label{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:6px;
+  font-size:14px;
+}
+
+.setting-item input{
+  width:100%;
+  padding:8px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.color-options{
+  display:flex;
+  gap:10px;
+}
+
+.color-btn{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+}
+
+.color-btn.active{
+  border:3px solid black;
+}
+
+/* =========================
+INPUT SECTION
+========================= */
+
+.todo-input-section{
+  margin-top:20px;
+}
+
+.todo-input-container{
+  display:flex;
+  gap:15px;
+  width:100%;
+}
+
+.todo-input{
+  flex:1;
+  padding:14px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:15px;
+}
+
+.priority-select{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.add-btn{
+  background:#6366f1;
+  color:white;
+  border:none;
+  padding:12px 18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.add-btn:hover{
+  background:#4f46e5;
+}
+
+/* =========================
+PRIORITY LABELS
+========================= */
+
+.priority-labels{
+  margin-top:10px;
+  display:flex;
+  gap:10px;
+}
+
+.priority-label{
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.priority-label.low{
+  background:#dcfce7;
+  color:#22c55e;
+}
+
+.priority-label.medium{
+  background:#fef3c7;
+  color:#f59e0b;
+}
+
+.priority-label.high{
+  background:#fee2e2;
+  color:#ef4444;
+}
+
+/* =========================
+FILTER
+========================= */
+
+.filter-container{
+  display:flex;
+  gap:10px;
+  margin:20px 0;
+}
+
+.filter-btn{
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#f3f4f6;
+  cursor:pointer;
+}
+
+.filter-btn.active{
+  background:#6366f1;
+  color:white;
+}
+
+/* =========================
+TODO LIST
+========================= */
+
+.todo-list{
+  list-style:none;
+  width:100%;
+}
+
+.todo-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px;
+  margin-bottom:12px;
+  border-radius:10px;
+  background:#f9fafb;
+}
+
+.todo-item.completed .todo-text{
+  text-decoration:line-through;
+  color:#9ca3af;
+}
+
+/* checkbox */
+
+.checkbox{
+  width:22px;
+  height:22px;
+  border-radius:6px;
+  border:2px solid #ccc;
+  margin-right:12px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.checkbox.checked{
+  background:#10b981;
+  border:none;
+}
+
+/* content */
+
+.todo-content{
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.todo-text{
+  font-size:16px;
+}
+
+/* badge */
+
+.priority-badge{
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+/* =========================
+ACTIONS
+========================= */
+
+.todo-actions{
+  display:flex;
+  gap:8px;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn{
+  border:none;
+  background:#e5e7eb;
+  padding:6px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.delete-btn:hover{
+  background:#fecaca;
+}
+
+.edit-btn:hover{
+  background:#bfdbfe;
+}
+
+/* =========================
+EDIT MODE
+========================= */
+
+.edit-container{
+  flex:1;
+  display:flex;
+  gap:8px;
+}
+
+.edit-input{
+  flex:1;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #ddd;
+}
+
+.edit-priority-select{
+  padding:6px;
+  border-radius:6px;
+}
+
+/* =========================
+EMPTY STATE
+========================= */
+
+.empty-state{
+  text-align:center;
+  padding:40px;
+  color:#9ca3af;
+}
+
+/* =========================
+STATS
+========================= */
+
+.stats{
+  margin-top:30px;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+}
+
+.clear-completed{
+  border:none;
+  background:transparent;
+  color:#ef4444;
+  cursor:pointer;
+}
