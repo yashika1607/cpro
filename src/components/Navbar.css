@@ -1,0 +1,61 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 80px;
+  z-index: 100;
+   /* 👇 THIS IS THE KEY */
+  margin: 0 40px;   /* left & right spacing */
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.nav-btn.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn span {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-btn.add-btn {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ff7eb9, #ff69b4);
+  border-radius: 18px;
+  color: white;
+  display: grid;
+  place-items: center;
+  transform: translateY(-20px);
+  box-shadow: 0 8px 24px rgba(255, 126, 185, 0.4);
+}
+
+.nav-btn.add-btn:hover {
+  transform: translateY(-22px) scale(1.05);
+}

@@ -1,0 +1,174 @@
+.task-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 16px;
+  transition: all 0.3s;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.task-card.completed {
+  opacity: 0.5;
+}
+
+.task-card.pinned {
+  border-left: 4px solid #f59e0b;
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.task-main {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-checkbox {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: white;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.task-checkbox.checked {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.task-title-row h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.pin-indicator {
+  color: #f59e0b;
+  display: flex;
+  align-items: center;
+}
+
+.pin-indicator svg {
+  width: 14px;
+  height: 14px;
+}
+
+.task-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.task-meta-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.task-meta-row svg {
+  width: 12px;
+  height: 12px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.category-badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.priority-badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.due-datetime {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s;
+}
+
+.action-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
